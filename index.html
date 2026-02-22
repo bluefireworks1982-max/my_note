@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图文笔记本</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h1>笔记目录</h1>
+          <button id="createNoteBtn">+ 新建笔记</button>
+        </div>
+        <ul id="noteList" class="note-list"></ul>
+      </aside>
+
+      <main class="editor">
+        <div class="toolbar">
+          <input id="titleInput" type="text" placeholder="输入笔记标题" />
+          <button id="renameBtn">重命名标题</button>
+          <button id="pickFolderBtn">选择本地文件夹</button>
+          <button id="saveLocalBtn">保存到本地文件夹</button>
+          <button id="clearCanvasBtn">清空画板</button>
+        </div>
+        <p id="folderHint" class="folder-hint">当前存储位置：浏览器本地存储（localStorage）</p>
+
+        <section class="content-grid">
+          <div class="card">
+            <h2>文字内容</h2>
+            <textarea id="noteText" placeholder="在这里写下你的想法..."></textarea>
+          </div>
+
+          <div class="card">
+            <h2>画图区域</h2>
+            <canvas id="drawCanvas" width="700" height="420"></canvas>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
